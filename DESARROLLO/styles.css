@@ -1,0 +1,518 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #888585;
+  background: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo span {
+  color: #888585;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;  /* coloca Odontología arriba */
+  align-items: flex-start; /* mantiene alineado a la izquierda (o usa center si lo quieres centrado) */
+  line-height: 1.1;
+}
+
+.logo .small {
+  font-size: 20px;        /* subtítulo, más grande que antes */
+  font-weight: 500;
+  color: #555;            /* gris elegante */
+  margin-bottom: 2px;     /* separa un poco de PIPECELY */
+}
+
+.logo .big {
+  font-size: 26px;        /* tres puntos más grande */
+  font-weight: bold;
+  color: #777;            /* negro fuerte */
+}
+
+.logo .big .reg {
+  font-size: 14px;        /* pequeño */
+  vertical-align: super;  /* en la parte superior */
+  color: #777;            /* gris */
+  margin-left: 2px;
+}
+
+
+
+.nav a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 8px 16px;
+  background: #f5f5f5;      /* recuadro gris claro */
+  color: #111;              /* texto negro */
+  text-decoration: none;    /* sin subrayado */
+  font-weight: bold;        /* negrita */
+  border-radius: 6px;       /* bordes redondeados */
+  transition: background 0.3s ease;
+}
+
+.nav a:hover {
+  background: #dcdcdc;      /* efecto hover */
+}
+
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero h2 { font-size: 40px; margin-bottom: 10px; }
+.hero p { margin-bottom: 20px; }
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Sections */
+.section { padding: 60px 0; }
+.section h2 { margin-bottom: 20px; color: #000; }
+
+/* Grid layouts */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.photo { width: 100%; border-radius: 10px; }
+
+/* Cards */
+.card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.service-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+/* Gallery */
+.case { position: relative; }
+.case-img { width: 100%; border-radius: 10px; }
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Promos */
+.promos { background: #f3f3f3; text-align: center; }
+.promo-list { list-style: none; margin-top: 20px; }
+.promo-list li { margin: 10px 0; font-weight: bold; }
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Ubicación */
+.ubicacion {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.ubicacion h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.ubicacion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.ubicacion-info h3 {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.ubicacion-info .icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.ubicacion-info p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.ubicacion-info ul {
+  list-style: none;
+  padding: 0;
+  color: #444;
+}
+
+.ubicacion-info li {
+  margin-bottom: 8px;
+}
+
+.map-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.social-links {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 12px;
+  font-size: 32px;       /* tamaño de los íconos */
+  color: #111;           /* color uniforme (oscuro, acorde a tu paleta) */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #555;           /* gris más claro al pasar el mouse */
+  transform: scale(1.2); /* pequeño zoom */
+}
+
+#sobre-mi .grid-2 div {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.promos {
+  background: #111;              /* fondo oscuro elegante */
+  color: #fff;                   /* texto blanco */
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+
+.promos h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.promo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.promo-card {
+  background: #1c1c1c;          /* gris oscuro elegante */
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.promo-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+}
+
+.promo-card p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  background: #222;              /* un poco más claro al pasar el mouse */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .hero h2 { font-size: 28px; }
+  .hero p { font-size: 16px; }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  /* Hero: texto aún más pequeño */
+  .hero h2 { font-size: 22px; }
+  .hero p { font-size: 14px; }
+  .btn { padding: 8px 16px; font-size: 13px; }
+
+  /* Promo cards más pequeñas */
+  .promo-card h3 { font-size: 20px; }
+  .promo-card p { font-size: 14px; }
+
+  /* Redes sociales más compactas */
+  .social-links a { font-size: 28px; margin: 0 8px; }
+}
+
+/* =============================
+   MEDIA QUERIES COMPLETOS PARA RESPONSIVE
+   ============================= */
+
+/* ----------------------------
+   Tablets (≤768px)
+   ---------------------------- */
+@media (max-width: 768px) {
+
+  /* Header y Nav */
+  .header-inner {
+    flex-direction: column;       /* logo arriba, nav debajo */
+    align-items: center;
+  }
+  .nav {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;       /* links apilados */
+    align-items: center;
+  }
+  .nav a {
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hero */
+  .hero h2 { font-size: 28px; }
+  .hero p { font-size: 16px; }
+  .btn { padding: 10px 18px; font-size: 14px; }
+
+  /* Grids de secciones */
+  .grid-2, .grid-3, .promo-cards { grid-template-columns: 1fr; }
+  
+  /* Ubicación: mapa debajo de la info */
+  .ubicacion-grid { grid-template-columns: 1fr; gap: 20px; }
+  .map-container { height: 300px; }
+
+  /* Promociones */
+  .promo-cards { grid-template-columns: 1fr; }
+}
+
+/* ----------------------------
+   Móviles (≤480px)
+   ---------------------------- */
+@media (max-width: 480px) {
+
+  /* Hero más compacto */
+  .hero h2 { font-size: 22px; }
+  .hero p { font-size: 14px; }
+  .btn { padding: 8px 16px; font-size: 13px; }
+
+  /* Promo cards más pequeñas */
+  .promo-card h3 { font-size: 20px; }
+  .promo-card p { font-size: 14px; }
+
+  /* Redes sociales más compactas */
+  .social-links a { font-size: 28px; margin: 0 8px; }
+
+  /* Ajuste general de padding si hace falta */
+  .section { padding: 40px 10px; }
+}
+
+/* Header base */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* Logo */
+.logo span { line-height: 1.1; }
+.logo .small { font-size: 20px; font-weight: 500; color: #555; margin-bottom: 2px; }
+.logo .big { font-size: 26px; font-weight: bold; color: #777; }
+.logo .big .reg { font-size: 14px; vertical-align: super; color: #777; margin-left: 2px; }
+
+/* Nav */
+.nav a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 8px 16px;
+  background: #f5f5f5;
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+.nav a:hover { background: #dcdcdc; }
+
+/* =============================
+   Menú hamburguesa
+   ============================= */
+#menu-toggle { display: none; }
+
+.menu-icon {
+  display: none; /* se muestra solo en móvil */
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+}
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background: #111;
+  border-radius: 3px;
+}
+
+/* =============================
+   Media Queries
+   ============================= */
+@media (max-width: 768px) {
+  .header-inner { flex-direction: row; justify-content: space-between; }
+
+  /* Mostrar icono hamburguesa */
+  .menu-icon { display: flex; }
+
+  /* Ocultar nav por defecto */
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Cuando el checkbox está activado, mostrar nav */
+  #menu-toggle:checked + .menu-icon + .nav { display: flex; }
+
+  /* Links estilo móvil */
+  .nav a {
+    margin: 8px 0;
+    padding: 8px 0;
+    background: #f5f5f5;
+    border-radius: 5px;
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .nav a { font-size: 14px; padding: 6px 0; }
+  .menu-icon { width: 25px; height: 20px; }
+  .menu-icon span { height: 2px; }
+}
+
+@media (max-width: 768px) {
+
+  .header-inner {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Mostrar icono */
+  .menu-icon { display: flex; }
+
+  /* Ocultar nav por defecto */
+  .nav {
+    display: none;
+    position: absolute;      /* se despliega sobre la página */
+    top: 60px;               /* debajo del header */
+    right: 10px;             /* alineado a la derecha */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex-direction: column;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  /* Mostrar nav cuando checkbox está activo */
+  #menu-toggle:checked + .menu-icon + .nav { display: flex; }
+
+  /* Links estilo lista */
+  .nav a {
+    margin: 0;               /* quitar margen horizontal */
+    padding: 10px 15px;      /* padding cómodo */
+    border-bottom: 1px solid #eee; /* línea entre links */
+    text-align: left;
+  }
+  .nav a:last-child { border-bottom: none; } /* quitar línea del último link */
+}
+
+/* Móvil muy pequeño */
+@media (max-width: 480px) {
+  .menu-icon { width: 25px; height: 20px; }
+  .menu-icon span { height: 2px; }
+  .nav a { padding: 8px 12px; font-size: 14px; }
+}
